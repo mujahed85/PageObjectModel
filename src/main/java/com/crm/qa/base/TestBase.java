@@ -49,8 +49,14 @@ public class TestBase {
 			// System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
 			// driver = new FirefoxDriver(); 
 		// }
+		
+		
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\.jenkins\\headless_brawsers\\geckodriver.exe");
-		driver = new FirefoxDriver(); 
+		File pathToBinary = new File("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+		FirefoxProfile firefoxProfile = new FirefoxProfile();       
+		
+		driver = new FirefoxDriver(ffBinary,firefoxProfile); 
 		
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
