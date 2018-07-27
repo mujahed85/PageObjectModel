@@ -41,15 +41,16 @@ public class TestBase {
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
 		
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
-			driver = new ChromeDriver(); 
-		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
-			driver = new FirefoxDriver(); 
-		}
-		
+		// if(browserName.equals("chrome")){
+			// System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
+			// driver = new ChromeDriver(); 
+		// }
+		// else if(browserName.equals("FF")){
+			// System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
+			// driver = new FirefoxDriver(); 
+		// }
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\.jenkins\\headless_brawsers\\geckodriver.exe");
+		driver = new FirefoxDriver(); 
 		
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
