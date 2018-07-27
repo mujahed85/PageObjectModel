@@ -33,6 +33,7 @@ public class TestBase {
 			System.out.println("***********USER DIRECTORY: "+System.getProperty("user.dir")+"**********************");
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
 					+ "/qa/config/config.properties");
+			System.out.println("***********Test Changes Done**********************");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
